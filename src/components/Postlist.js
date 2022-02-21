@@ -1,8 +1,15 @@
 import React from 'react'
+import PostContent from './PostContent'
 
-function Postlist() {
+function Postlist({posts}) {
   return (
-    <div>Postlist</div>
+    <div>
+        {
+            posts.map( (post) => (
+                <PostContent key={post._id}  post={post} /> 
+            ))
+        }    
+    </div>
   )
 }
 
