@@ -6,13 +6,17 @@ import {
   Route
 } from "react-router-dom";
 import Home from './pages/Home';
+import ListofPunsPage from './pages/ListofPunsPage';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/posts" element={<ListofPunsPage />} ></Route>
         </Routes>
       </BrowserRouter>
     </div>
