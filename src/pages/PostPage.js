@@ -5,7 +5,7 @@ import PostContent from '../components/PostContent';
 
 function PostPage() {
     //change to single post, setPost
-    const [post, setPost] = useState([])
+    const [post, setPost] = useState({}) //the object within the array
     //use data from URL
     const params = useParams();
  
@@ -31,7 +31,10 @@ function PostPage() {
   return (
     <div>
         <h1>unique site for {params.id}</h1>
-        <PostContent post={post} />
+        <article>
+          <p>{post.content}</p>
+          <p>{post.date}</p>
+    </article>
     </div>
   )
 }
